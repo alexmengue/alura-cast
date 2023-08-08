@@ -1,11 +1,11 @@
 :root {
-    --azul-escuro: #041833;
-    --azul-medio: #154580;
-    --azul-degrade: linear-gradient(180deg, var(--azul-medio) 0%, var(--azul-escuro) 100%);
-    --verde: #84EEC1;
-    --cinza: rgba(196, 196, 196, 0.2);
-    --cor-textos: #ffffff;
-    --fonte-textos: 'Open Sans', sans-serif;
+    --dark-blue: #041833;
+    --normal-blue: #154580;
+    --gradient-blue: linear-gradient(180deg, var(--normal-blue) 0%, var(--dark-blue) 100%);
+    --green: #84EEC1;
+    --grey: rgba(196, 196, 196, 0.2);
+    --color-text: #ffffff;
+    --font-text: 'Open Sans', sans-serif;
 }
 
 * {
@@ -13,9 +13,9 @@
 }
 
 body {
-    color: var(--cor-textos);
-    background: var(--azul-degrade);
-    font-family: var(--fonte-textos);
+    color: var(--color-text);
+    background: var(--gradient-blue);
+    font-family: var(--font-text);
 }
 
 .container {
@@ -24,119 +24,119 @@ body {
     
 }
 
-.menu-lateral {
-    background-color: var(--azul-escuro);
+.side-menu {
+    background-color: var(--dark-blue);
     padding: 2.5rem .5rem 0;
     font-weight: 600;
     letter-spacing: 2px;
     width: 230px;
 }
 
-.menu-lateral__link::before  {
+.side-menu__link::before  {
     padding-left: 1rem;
     padding-right: .5rem;
     vertical-align: middle;
 }
 
-.menu-lateral__link {
-    font-family: var(--fonte-textos);
+.side-menu__link {
+    font-family: var(--font-text);
     font-weight: 600;
     letter-spacing: 2px;
     margin-bottom: .5rem;
 }
 
-.ativo {
-    background-color: var(--azul-medio);
+.active {
+    background-color: var(--normal-blue);
     border-radius: 5px;
     padding: .75rem 0;
 }
 
-.menu-lateral__link--home::before {
+.side-menu__link--home::before {
     content: url("../img/icone-home.svg");
 }
 
-.menu-lateral__link--busca::before {
+.side-menu__link--search::before {
     content: url("../img/icone-busca.svg");
 }
 
-.menu-lateral__link--biblioteca::before {
+.side-menu__link--library::before {
     content: url("../img/icone-biblioteca.svg");
 }
 
-.menu-lateral__playlist {
+.side-menu__playlist {
     text-transform: uppercase;
     padding-left: 1rem;
 }
 
-.menu-lateral__link--playlist::before {
+.side-menu__link--playlist::before {
     content: url("../img/icone-add_box.svg");
 }
 
-.menu-lateral__link--podcasts::before {
+.side-menu__link--podcasts::before {
     content: url("../img/icone-stars.svg");
 }
 
-.cabecalho {
+.header {
     padding-top: 2.5rem;
 }
 
-.cabecalho__botao:nth-of-type(1) {
+.header__btn:nth-of-type(1) {
     margin-right: 1rem;
 }
 
-.secao__titulo {
+.section__title {
     font-weight: 700;
     font-size: 1.5rem;
 }
 
-.cartao__titulo{
+.card__title {
     font-weight: 700;
     line-height: 22px;
 }
 
-.cartao__subtitulo {
+.card__subtitle {
     font-size: 14px;
 }
 
-.secao-horizontal .cartao {
-    background: var(--cinza);
+.section-horizontal .card {
+    background: var(--grey);
     border-radius: 10px;
 }
 
-.secao-horizontal .cartao__imagem {
+.section-horizontal .card__img {
     height: 72px;
 }
 
-.secao-horizontal .cartao__player {
+.section-horizontal .card__player {
     width: 164px;
     height: 4px;
     background: white;
     border-radius: 10px;
 }
 
-.secao-horizontal .cartao__botao {
+.section-horizontal .card__btn {
     width: 70px;
 }
 
-.secao-vertical .cartao {
+.section-vertical .card {
     background: rgba(196, 196, 196, 0.2);
     border-radius: 10px;
     padding: 1rem;
     padding: 1rem;
 }
 
-.secao-vertical .cartao__imagem {
+.section-vertical .card__img {
     height: 133px;
     margin-bottom: .5rem;
 }
-.secao-vertical .cartao__subtitulo {
+.section-vertical .card__subtitle {
     margin-top: .75rem;
 }
 
 .navbar {
     position: fixed;
     bottom: 0;
-    background-color: var(--azul-escuro);
+    background-color: var(--dark-blue);
     width: 100vw;
     opacity: 0.9;
 }
@@ -159,11 +159,11 @@ body {
     content: url("../img/icone-home-mb.svg");
 }
 
-.navbar__item--busca::before {
+.navbar__item--search::before {
     content: url("../img/icone-busca-mb.svg");
 
 }
 
-.navbar__item--biblioteca::before {
+.navbar__item--library::before {
     content: url("../img/icone-biblioteca-mb.svg");
 }
